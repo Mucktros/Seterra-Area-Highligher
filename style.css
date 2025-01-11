@@ -1,0 +1,9 @@
+g.q:hover:not(.answered):not(.flashing) polygon:not(.showbefore):not(.misc),
+g.q:hover:not(.answered):not(.flashing)
+  circle:not(.city):not(.city1):not(.city2):not(.showbefore):not(.showafter):not(.misc),
+g.q:hover:not(.answered):not(.flashing) path:not(.showbefore):not(.showafter),
+g.q:hover:not(.answered):not(.flashing)
+  ellipse:not(.city):not(.city1):not(.city2):not(.showbefore):not(.showafter):not(.misc) {
+  fill: gold !important;
+  stroke-width: 1px !important;
+}
