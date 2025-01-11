@@ -1,19 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "GeoGuessr Region Highlighter",
-  "version": "1.1",
-  "description": "Highlights regions in GeoGuessr quizzes based on the tooltip.",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": [
-    "https://www.geoguessr.com/vgp/*",
-    "https://www.geoguessr.com/fl/*"
+  "name": "Highlight Elements in New Window",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "storage"
   ],
+  "host_permissions": [
+    "https://www.geoguessr.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.geoguessr.com/vgp/*",
-        "https://www.geoguessr.com/fl/*"
-      ],
+      "matches": ["https://www.geoguessr.com/*"],
       "js": ["content.js"]
     }
   ]
